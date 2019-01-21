@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="background-color:#C2B8B2">
+      <h2 style="color:black">Bienes Raices</h2>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style="background-color:#C2B8B2">
+  <ion-card style="border-radius:10px" *ngFor="let c of casas">
+    <ion-item (click)="clickobjeto(c)">
+        <img [src]=c.imagen>
+      <h2>{{c.nombre}}</h2>
+      <p>{{c.precio}}</p>
+    </ion-item>
+  </ion-card>
+  <button ion-button block (click)="clickfavs()"><ion-icon name= "heart"></ion-icon>Ver Favoritos</button>
 </ion-content>

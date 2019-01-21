@@ -1,0 +1,26 @@
+<!--
+  Generated template for the FavsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="background-color:#C2B8B2">
+      <h2 style="color:black">Favoritos</h2>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#C2B8B2">
+<ion-card style="border-radius:10px" *ngFor="let f of favo">
+  <img [src]=f.imagen>
+  <ion-item>
+    <p>{{f.nombre}}</p>
+    <p>{{f.precio}}</p>
+  </ion-item>
+</ion-card>
+</ion-content>
